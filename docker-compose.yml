@@ -1,0 +1,14 @@
+name: nexusxyz
+
+services:
+  nexus:
+    image: trancelife/nexus:latest
+    restart: unless-stopped
+    network_mode: 'host'
+    volumes:
+      - ./.nexus:/root/.nexus
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: 2048m
