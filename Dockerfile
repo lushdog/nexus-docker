@@ -17,7 +17,7 @@ RUN apt update && apt install -y ca-certificates && rm -rf /var/lib/apt/lists/*
 COPY --from=builder /usr/src/app/network-api /usr/src/app/network-api
 
 # 设置工作目录
-WORKDIR /usr/src/app/network-api/clients/cli/target/release
+WORKDIR /usr/src/app/network-api/clients/cli
 
 # 设置默认命令
-CMD ["./prover", "beta.orchestrator.nexus.xyz"]
+CMD ["./target/release/prover", "beta.orchestrator.nexus.xyz"]
