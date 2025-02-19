@@ -1,6 +1,6 @@
 FROM rust:bullseye AS builder
 
-RUN apt update && apt install -y build-essential pkg-config libssl-dev git-all protobuf-compiler git
+RUN apt update && apt install -y build-essential pkg-config libssl-dev protobuf-compiler git
 
 WORKDIR /usr/src/app
 
