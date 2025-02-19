@@ -2,7 +2,7 @@ name: nexusxyz
 
 services:
   nexus:
-    image: trancelife/nexus:latest
+    image: ghcr.io/lushdog/nexus:latest
     restart: unless-stopped
     network_mode: 'host'
     volumes:
