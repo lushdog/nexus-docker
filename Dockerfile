@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 
 RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protoc-21.12-linux-x86_64.zip && \
     unzip -d temp protoc-21.12-linux-x86_64.zip && \
-    mv temp/include/bin/protoc /usr/local/bin/
+    mv temp/bin/protoc /usr/local/bin/
 
 RUN git clone https://github.com/nexus-xyz/network-api && \
     cd network-api && \
