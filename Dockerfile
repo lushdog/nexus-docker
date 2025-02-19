@@ -1,6 +1,6 @@
 FROM rust:bullseye AS builder
 
-RUN apt update && apt install -y build-essential unzip pkg-config libssl-dev git
+RUN apt update && apt install -y wget build-essential unzip pkg-config libssl-dev git
 
 WORKDIR /usr/src/app
 
