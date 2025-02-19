@@ -5,7 +5,7 @@ services:
     image: ghcr.io/lushdog/nexus:latest
     restart: unless-stopped
     network_mode: 'host'
-     environment:
+    environment:
       - NONINTERACTIVE=1
     volumes:
       - ./.nexus:/root/.nexus
