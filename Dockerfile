@@ -23,5 +23,10 @@ COPY --from=builder /usr/src/app/network-api /usr/src/app/network-api
 # 设置工作目录
 WORKDIR /usr/src/app/network-api/clients/cli
 
+COPY entrypoint.sh entrypoint.sh
+
+RUN chmod +x entrypoint.sh
+
 # 设置默认命令
-CMD ["./target/release/nexus-network", "--start", "--beta"]
+ENTRYPOINT ["./entrypoint.sh"]
+
