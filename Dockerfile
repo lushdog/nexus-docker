@@ -20,4 +20,4 @@ COPY --from=builder /usr/src/app/network-api /usr/src/app/network-api
 WORKDIR /usr/src/app/network-api/clients/cli
 
 # 设置默认命令
-CMD ["./target/release/prover", "beta.orchestrator.nexus.xyz"]
+CMD ["./target/release/nexus-network", "--start", "--beta"]
