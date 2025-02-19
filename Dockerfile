@@ -5,8 +5,8 @@ RUN apt update && apt install -y wget build-essential unzip pkg-config libssl-de
 WORKDIR /usr/src/app
 
 RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protoc-21.12-linux-x86_64.zip && \
-    unzip protoc-21.12-linux-x86_64.zip && \
-    mv protoc-21.12-linux-x86_64/bin/protoc /usr/local/bin/
+    unzip -d temp protoc-21.12-linux-x86_64.zip && \
+    mv temp/include/bin/protoc /usr/local/bin/
 
 RUN git clone https://github.com/nexus-xyz/network-api && \
     cd network-api && \
